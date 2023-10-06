@@ -8,6 +8,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 @Repository
 public interface NotificationTaskRepository extends JpaRepository<NotificationTask, Long> {
+    List<NotificationTask> findAllByExecDateLessThan(LocalDateTime timePoint);
     // Все события(переданные), которые по дате меньше - будем доставать из бд
-
 }
